@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'select-button-component',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectButtonComponent implements OnInit {
 
+  @Input() options;
+  @Input() selected;
   constructor() { }
 
   ngOnInit() {
