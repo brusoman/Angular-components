@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {OPTIONS} from "./button-mock";
+import {ObjOPTIONS, OPTIONS} from "./button-mock";
 
 @Component({
   selector: 'select-button-view',
@@ -7,7 +7,8 @@ import {OPTIONS} from "./button-mock";
   styleUrls: ['./select-button-view.component.scss']
 })
 export class SelectButtonViewComponent implements OnInit {
-  options = OPTIONS;
+  options = ObjOPTIONS;
+  Test = "Test String";
   constructor() { }
 
   ngOnInit() {
