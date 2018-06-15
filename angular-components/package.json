@@ -1,5 +1,5 @@
 {
-  "label": "angular-components",
+  "name": "angular-components",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

@@ -1,10 +1,4 @@
-export const OPTIONS =[
-  1,
-  2,
-  3,
-
-];
-export const ObjOPTIONS = [
+export const OBJ_OPTIONS = [
   {label: 'New York', code: 'NY'},
   {label: 'Rome', code: 'RM'},
   {label: 'London', code: 'LDN'},

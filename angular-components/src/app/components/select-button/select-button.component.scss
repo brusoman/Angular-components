@@ -1,49 +1,55 @@
-.button__list{
-  background-color: darkgray;
-  padding: 150px 150px;
-  border-radius: 20px;
+$button__list-color: darkgray;
+$button__body-color: #3E97D1;
+$button__label-color: #0A67A3;
+$button__label-color: #0A67A3;
+$button__label_sh-color: #448b4e;
+
+.button {
+  &__list {
+    background-color: $button__list-color;
+    padding: 150px 150px;
+    border-radius: 20px;
+
+    &_show {
+      display: inline-flex;
+    }
+  }
+  &__option {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: $button__body-color;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    width: 150px;
+    border-radius: 4px;
+
+  }
+
+  &__label {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color: $button__label-color;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+    width: 60px;
+
+    &_selected {
+      background: blue;
+      border: solid 5px crimson;
+    }
+    &_show {
+      @extend .button__label;
+      background-color:$button__label_sh-color ;
+
+    }
+  }
 }
-.button__list_show{
-  display: inline-flex;
-}
-.button__body {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #3E97D1;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  width: 150px;
-  border-radius: 4px;
-
-
-}
-
-.button__label {
-  display: inline-block;
-  font-size: small;
-  color: white;
-  padding: 0.8em 0.7em 0 0.7em;
-  background-color: #0A67A3;
-  line-height: 1em;
-  position: relative;
-  left: -1px;
-  top: -4px;
-  height: 1.8em;
-  margin-right: .8em;
-  border-radius: 4px 0 0 4px;
-  width: 60px;
-
-}
-.button__label_selected{
-
-  background: blue;
-  border: solid 5px crimson;
-
-}
- .button__label_show{
-   @extend .button__label;
-   background-color: #448b4e;
- }
-
