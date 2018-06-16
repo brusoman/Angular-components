@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {OptionModel} from "./select-button.model";
 
 @Component({
@@ -9,9 +9,9 @@ import {OptionModel} from "./select-button.model";
 export class SelectButtonComponent implements OnInit {
 
   @Input() options: OptionModel[];
-  @Input('ngModel') selected: OptionModel; //TODO Make output here
   @Input('multiple') multiple: boolean;
-
+  @Output() onSelect = new EventEmitter<OptionModel[]>(); //TODO Make output here
+  @Output()onOptionClick = new EventEmitter<any>();
   selectedOptions: OptionModel[] = [];
 
   constructor() {
@@ -22,7 +22,7 @@ export class SelectButtonComponent implements OnInit {
     console.log("Multiple:",this.multiple);
    }
 
-  onSelect(option: OptionModel) {
+  onClick(option: OptionModel) {
 
     if (this.multiple == false) {
       for (let i = 0; i < this.options.length; i++) {
@@ -39,9 +39,9 @@ export class SelectButtonComponent implements OnInit {
     }
 
     console.log(option);
-    console.log("Array: ", this.selectedOptions);
+    console.log("Array from multiple: ",this.multiple, this.selectedOptions);
 
-
+  this.onSelect.emit(this.selectedOptions);
   }
 
 

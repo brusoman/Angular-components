@@ -1,4 +1,48 @@
-<h3>Select button preview:</h3>
+<div class="multiple">
+  <div class="button__list">
+    <h3>Multiple selection</h3>
+    <select-button-component [options]="options" (onSelect)="getSelectedOptionsMultiple($event)"
+                             [multiple]="true"></select-button-component>
+    <p>SELECTED OPTIONS:</p>
+    <ng-container *ngIf="selectedOptionsMultiple">
 
-<select-button-component [options]="options" [ngModel]="Test" [multiple]="true" ></select-button-component>
+
+      <ng-container *ngFor="let select of selectedOptionsMultiple" class="button__list_show">
+
+        <div *ngIf="select.isSelected" class="button__option">
+
+          <span class="button__label_show">{{select.label}}</span>
+        </div>
+
+
+      </ng-container>
+
+    </ng-container>
+  </div>
+</div>
+
+<div class="single">
+  <div class="button__list">
+    <h3>Single selection</h3>
+
+    <select-button-component [options]="options" (onSelect)="getSelectedOptionsSingle($event)"
+                             [multiple]="false"></select-button-component>
+
+    <p>SELECTED OPTIONS:</p>
+    <ng-container *ngIf="selectedOptionsSingle" class="button__list_show">
+
+
+      <ng-container *ngFor="let select of selectedOptionsSingle">
+
+        <div *ngIf="select.isSelected" class="button__option">
+
+          <span class="button__label_show">{{select.label}}</span>
+        </div>
+
+
+      </ng-container>
+
+    </ng-container>
+  </div>
+</div>
 

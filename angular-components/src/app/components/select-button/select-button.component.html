@@ -1,26 +1,26 @@
 <div class="button">
 
-  <div class="button__list">
+  <!--<div class="button__list">-->
 
-    <h3>Multiple selection</h3>
-    <div *ngFor="let option of options" class="button__option" (click)="onSelect(option)"
+
+    <div *ngFor="let option of options" class="button__option" (click)="onClick(option)"
          [class.button__label_selected]="option.isSelected">
 
       <span class="button__label">{{option.label}}</span>
     </div>
 
 
-    <div class="button__list_show">
-      <p>Selected button:</p>
-      <ng-container *ngFor="let select of options">
+    <!--<div class="button__list_show">-->
+      <!--<p>Selected button:</p>-->
+      <!--<ng-container *ngFor="let select of options">-->
 
-        <div *ngIf="select.isSelected" class="button__option">
+        <!--<div *ngIf="select.isSelected" class="button__option">-->
 
-          <span class="button__label_show">{{select.label}}</span>
-        </div>
+          <!--<span class="button__label_show">{{select.label}}</span>-->
+        <!--</div>-->
 
 
-      </ng-container>
-    </div>
-  </div>
+      <!--</ng-container>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
