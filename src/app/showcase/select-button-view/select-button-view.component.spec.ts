@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { SelectButtonViewComponent } from './select-button-view.component';
+import {SelectButtonViewComponent} from './select-button-view.component';
 
 describe('SelectButtonViewComponent', () => {
   let component: SelectButtonViewComponent;
