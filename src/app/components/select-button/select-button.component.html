@@ -1,0 +1,21 @@
+
+<ng-template #default>
+  <div *ngFor="let option of options" class="button__option" (click)="onClick(option)"
+       [class.button__option_selected]="option.isSelected">
+
+    <span class="button__label" [class.button__label_selected]="option.isSelected">{{option.label}}
+
+      <!--<ng-container *ngTemplateOutlet="outTemplate"></ng-container>-->
+
+    </span>
+
+  </div>
+</ng-template>
+
+
+<div class="button">
+
+ <ng-container *ngTemplateOutlet="default"></ng-container>
+
+
+</div>
