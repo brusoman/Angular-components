@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {OptionModel} from "./select-button.model";
 
 @Component({
@@ -8,9 +8,11 @@ import {OptionModel} from "./select-button.model";
 })
 export class SelectButtonComponent implements OnInit {
 
-  @Input() options: OptionModel[];
+  @Input('options') options: OptionModel[];
   @Input('multiple') multiple: boolean;
-  @Output() onSelect = new EventEmitter<OptionModel[]>(); //TODO Make output here
+
+  @Input() outTemplate: TemplateRef<any>;
+  @Output() onSelect: EventEmitter<OptionModel[]> = new EventEmitter<OptionModel[]>();
   @Output()onOptionClick = new EventEmitter<any>();
   selectedOptions: OptionModel[] = [];
 
@@ -24,7 +26,7 @@ export class SelectButtonComponent implements OnInit {
 
   onClick(option: OptionModel) {
 
-    if (this.multiple == false) {
+    if (!this.multiple) {
       for (let i = 0; i < this.options.length; i++) {
         this.options[i].isSelected = false;
       }

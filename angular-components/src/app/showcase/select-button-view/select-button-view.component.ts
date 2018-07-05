@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {OBJ_OPTIONS} from "./button-mock";
+import {OBJ_OPTIONS, OBJ_OPTIONS2} from "./button-mock";
 import {OptionModel} from "../../components/select-button/select-button.model";
 
 @Component({
@@ -9,7 +9,7 @@ import {OptionModel} from "../../components/select-button/select-button.model";
 })
 export class SelectButtonViewComponent implements OnInit {
   options = OBJ_OPTIONS;
-
+  options2 = OBJ_OPTIONS2;
 
   selectedOptionsMultiple: OptionModel[];
   selectedOptionsSingle: OptionModel[];
