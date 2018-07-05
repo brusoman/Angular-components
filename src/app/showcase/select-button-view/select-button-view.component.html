@@ -4,55 +4,58 @@
 
     <select-button-component [options]="options" (onSelect)="getSelectedOptionsMultiple($event)"
                              [multiple]="true"
-                              [outTemplate]="outTemplate">
+                             [outTemplate]="outTemplate">
       <ng-template #outTemplate class="">
         <img class="button__img" src="https://cdn2.iconfinder.com/data/icons/web-and-apps-interface/32/OK-128.png">
         <span>Test template</span>
       </ng-template>
 
 
-
     </select-button-component>
-    <p>SELECTED OPTIONS:</p>
-    <ng-container *ngIf="selectedOptionsMultiple">
+
+    <div class="button__list_show">
+      <p>SELECTED OPTIONS:</p>
+      <ng-container *ngIf="selectedOptionsMultiple">
 
 
-      <ng-container *ngFor="let select of selectedOptionsMultiple" class="button__list_show">
+        <ng-container *ngFor="let select of selectedOptionsMultiple">
 
-        <div *ngIf="select.isSelected" class="button__option">
+          <div *ngIf="select.isSelected" class="button__option">
 
-          <span class="button__label_show">{{select.label}}</span>
-        </div>
-
-
-      </ng-container>
-
-    </ng-container>
-  </div>
-</div>
-
-<div class="single">
-  <div class="button__list">
-    <h3>Single selection</h3>
-
-    <select-button-component [options]="options2" (onSelect)="getSelectedOptionsSingle($event)"
-                             [multiple]="false"></select-button-component>
-
-    <p>SELECTED OPTIONS:</p>
-    <ng-container *ngIf="selectedOptionsSingle" class="button__list_show">
+            <span class="button__label_show">{{select.label}}</span>
+          </div>
 
 
-      <ng-container *ngFor="let select of selectedOptionsSingle">
-
-        <div *ngIf="select.isSelected" class="button__option">
-
-          <span class="button__label_show">{{select.label}}</span>
-        </div>
-
+        </ng-container>
 
       </ng-container>
+    </div>
+    <div>
+    </div>
 
-    </ng-container>
-  </div>
-</div>
+    <div class="single">
+      <div class="button__list">
+        <h3>Single selection</h3>
+
+        <select-button-component [options]="options2" (onSelect)="getSelectedOptionsSingle($event)"
+                                 [multiple]="false"></select-button-component>
+
+        <div class="button__list_show">
+          <p>SELECTED OPTIONS:</p>
+          <ng-container *ngIf="selectedOptionsSingle">
+
+
+            <ng-container *ngFor="let select of selectedOptionsSingle">
+
+              <div *ngIf="select.isSelected" class="button__option">
+
+                <span class="button__label_show">{{select.label}}</span>
+              </div>
+
+
+            </ng-container>
+          </ng-container>
+        </div>
+      </div>
+    </div>
 

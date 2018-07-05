@@ -5,13 +5,18 @@ $button__label-color: #0A67A3;
 $button__label_sh-color: #448b4e;
 
 .button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #404c51;
   &__list {
     background-color: $button__list-color;
     padding: 100px 100px;
     border-radius: 20px;
 
     &_show {
-      display: inline-flex;
+      background-color: #448b4e;
+      display: none;
     }
   }
   &__img{
@@ -25,37 +30,38 @@ $button__label_sh-color: #448b4e;
     cursor: pointer;
     position: relative;
     left: 0;
-    background-color: $button__body-color;
     margin: .5em;
     padding: .3em 0;
-    height: 50px;
-    width: 150px;
-    border-radius: 4px;
+    height: 20px;
+    width: 90px;
+    border: 1px solid #d6d6d6;
+
+    &_selected {
+      background: #1976d2;
+      color: #d6d6d6;
+    }
+  }
+  &__option:hover {
+    background-color: #d6d6d6;
 
   }
 
   &__label {
-    display: inline-block;
-    font-size: small;
-    color: white;
-    padding: 0.8em 0.7em 0 0.7em;
-    background-color: $button__label-color;
-    line-height: 1em;
-    position: relative;
-    left: -1px;
-    top: -4px;
-    height: 50px;
-    margin-right: .8em;
-    border-radius: 4px 0 0 4px;
-    width: 60px;
-
-    &_selected {
-      background: blue;
-      border: solid 5px crimson;
-    }
+    //position: absolute;
+    background: none;
+    color: #555555;
+    margin-left: 15px;
     &_show {
       @extend .button__label;
-      background-color:$button__label_sh-color ;
+    }
+    &_selected {
+      color: white;
+    }
+    :hover {
+      background: #0A67A3;
+    }
+    &__label:hover {
+      color: #448b4e;
 
     }
   }
