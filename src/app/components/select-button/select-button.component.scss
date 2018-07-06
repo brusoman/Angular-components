@@ -1,14 +1,10 @@
-$button__list-color: darkgray;
-$button__body-color: #3E97D1;
-$button__label-color: #0A67A3;
-$button__label-color: #0A67A3;
-$button__label_sh-color: #448b4e;
+@import "../../colors";
 
 .button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #404c51;
+  color: $button-color;
   &__list {
     background-color: $button__list-color;
     padding: 100px 100px;
