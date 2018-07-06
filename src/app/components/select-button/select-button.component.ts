@@ -8,42 +8,40 @@ import {OptionModel} from "./select-button.model";
 })
 export class SelectButtonComponent implements OnInit {
 
-  @Input('options') options: OptionModel[];
+  @Input() options: OptionModel[];
   @Input('multiple') multiple: boolean;
 
   @Input() outTemplate: TemplateRef<any>;
   @Output() onSelect: EventEmitter<OptionModel[]> = new EventEmitter<OptionModel[]>();
-  @Output()onOptionClick = new EventEmitter<any>();
+  @Output() onOptionClick = new EventEmitter<any>();
   selectedOptions: OptionModel[] = [];
 
-  constructor() {
-  }
 
   ngOnInit() {
     console.log("On init");
-    console.log("Multiple:",this.multiple);
-   }
+    console.log("Multiple:", this.multiple);
+  }
 
-  onClick(option: OptionModel) {
+  onClick(clickOption: OptionModel) {
 
     if (!this.multiple) {
       for (let i = 0; i < this.options.length; i++) {
         this.options[i].isSelected = false;
       }
     }
-    option.isSelected = !option.isSelected;
+    clickOption.isSelected = !clickOption.isSelected;
 
     this.selectedOptions = [];
-    for (let i = 0; i < this.options.length; i++) {
-      if (this.options[i].isSelected) {
-      this.selectedOptions.push(this.options[i]);
+    for (let option of this.options) {
+      if (option.isSelected) {
+        this.selectedOptions.push(option);
       }
     }
 
-    console.log(option);
-    console.log("Array from multiple: ",this.multiple, this.selectedOptions);
+    console.log(clickOption);
+    console.log("Array from multiple: ", this.multiple, this.selectedOptions);
 
-  this.onSelect.emit(this.selectedOptions);
+    this.onSelect.emit(this.selectedOptions);
   }
 
 
