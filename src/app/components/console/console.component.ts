@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, Pipe, PipeTransform} from '@angular/core';
 import {OptionModel} from "../select-button/select-button.model";
 
 @Component({
@@ -8,7 +8,13 @@ import {OptionModel} from "../select-button/select-button.model";
 })
 export class ConsoleComponent {
   @Input() inArray: OptionModel[];
-  // test = OBJ_OPTIONS;
+  text: string = JSON.stringify(this.inArray);
+}
 
+@Pipe({name: 'consolePipe'})
+export class ConsolePipe implements PipeTransform {
+  transform(value: OptionModel[]): String[] {
 
+    return value.map((option) => JSON.stringify(option))
+  }
 }
