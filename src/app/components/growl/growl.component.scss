@@ -1,0 +1,26 @@
+.growl {
+  width: 300px;
+  height: 150px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #5cb85c;
+  border: 1px solid #5cb85c;
+  border-radius: 5px;
+  color: white;
+  &__button {
+
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  &__title {
+    font-family: Arial;
+    font-size: 25px;
+  }
+  &__message {
+    font-family: Arial;
+    font-size: 20px;
+  }
+}

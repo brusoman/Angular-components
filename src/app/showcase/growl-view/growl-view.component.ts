@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-growl-view',
+  selector: 'growl-view',
   templateUrl: './growl-view.component.html',
   styleUrls: ['./growl-view.component.scss']
 })
