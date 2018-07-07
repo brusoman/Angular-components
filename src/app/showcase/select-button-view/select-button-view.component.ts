@@ -22,9 +22,12 @@ export class SelectButtonViewComponent implements OnInit {
 
   getSelectedOptionsMultiple(options: OptionModel[]) {
     this.selectedOptionsMultiple = options;
+    console.log("Multiple" + JSON.stringify(this.selectedOptionsMultiple));
   }
 
   getSelectedOptionsSingle(options: OptionModel[]) {
     this.selectedOptionsSingle = options;
+    console.log("Single" + JSON.stringify(this.selectedOptionsSingle));
+
   }
 }

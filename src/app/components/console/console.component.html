@@ -1,0 +1,9 @@
+<div class="console">
+  <ng-container *ngIf="inArray" class="console__list">
+    <ng-container *ngFor="let option of inArray">
+      <div class="console__option">
+        <span>{{option.label}}</span>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

@@ -5,33 +5,16 @@
   flex-direction: row;
   flex-wrap: wrap;
   color: $button-color;
-  &__list {
-    background-color: $button__list-color;
-    padding: 100px 100px;
-    border-radius: 20px;
 
-    &_show {
-      background-color: #448b4e;
-      display: none;
-    }
-  }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
-    margin-left: 70px;
-
-  }
   &__option {
     cursor: pointer;
-    position: relative;
-
     margin: 1px;
     padding: 5px;
     height: 20px;
     width: 90px;
     border: 1px solid #d6d6d6;
-
+    justify-content: center;
+    align-items: center;
     &_selected {
       background: #1976d2;
       color: #d6d6d6;
@@ -43,10 +26,8 @@
   }
 
   &__label {
-    //position: absolute;
     background: none;
     color: #555555;
-    margin-left: 15px;
     &_show {
       @extend .button__label;
     }

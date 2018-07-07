@@ -1,64 +1,19 @@
 @import "../../colors";
+@import "../../components/select-button/select-button.component";
+
 .button {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: $button-color;
   &__list {
 
     &_show {
-      display: flex;
-
       flex-direction: row;
-
       display: none;
     }
   }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
-    margin-left: 70px;
 
-  }
-  &__option {
-    cursor: pointer;
-    position: relative;
-    left: 0;
-    margin: .5em;
-    padding: .3em 0;
-    height: 20px;
-    width: 90px;
-    border: 1px solid #d6d6d6;
+}
 
-    &_selected {
-      background: #1976d2;
+.console-section {
+  display: flex;
+  flex-direction: row;
 
-      color: #d6d6d6;
-    }
-  }
-  &__option:hover {
-    background-color: #d6d6d6;
-
-  }
-  &__label {
-
-    background: none;
-    color: #555555;
-    margin-left: 15px;
-    &_show {
-      @extend .button__label;
-
-    }
-    &_selected {
-      color: white;
-    }
-    :hover {
-      background: #0A67A3;
-    }
-    &__label:hover {
-      color: #448b4e;
-
-    }
-  }
 }
