@@ -13,8 +13,8 @@ export class ConsoleComponent {
 
 @Pipe({name: 'consolePipe'})
 export class ConsolePipe implements PipeTransform {
-  transform(value: OptionModel[]): String[] {
+  transform(value: OptionModel): String {
 
-    return value.map((option) => JSON.stringify(option))
+    return JSON.stringify(value);
   }
 }

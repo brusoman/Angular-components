@@ -1,11 +1,9 @@
 <div class="console">
   <ng-container *ngIf="inArray">
-    <ng-container *ngFor="let option of inArray | consolePipe">
+    <ng-container *ngFor="let option of inArray">
       <div class="console__option">
-        <span>{{option}}</span>
+        <span>{{option | consolePipe}}</span>
       </div>
     </ng-container>
   </ng-container>
-  <!--{{text}}-->
-  {{inArray | consolePipe}}}
 </div>
