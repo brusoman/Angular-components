@@ -1,16 +1,14 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'growl-view',
   templateUrl: './growl-view.component.html',
   styleUrls: ['./growl-view.component.scss']
 })
-export class GrowlViewComponent implements OnInit {
+export class GrowlViewComponent {
 
-  constructor() {
+  showSucceed() {
+
+
   }
-
-  ngOnInit() {
-  }
-
 }

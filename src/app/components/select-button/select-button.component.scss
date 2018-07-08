@@ -1,11 +1,11 @@
 @import "../../colors";
 
 .button {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   color: $button-color;
   &__list {
+    display: flex;
     background-color: $button__list-color;
     padding: 100px 100px;
     border-radius: 20px;
