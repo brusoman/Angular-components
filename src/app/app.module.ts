@@ -6,6 +6,7 @@ import {SelectButtonComponent} from './components/select-button/select-button.co
 import {SelectButtonViewComponent} from './showcase/select-button-view/select-button-view.component';
 import {GrowlComponent} from './components/growl/growl.component';
 import {GrowlViewComponent} from './showcase/growl-view/growl-view.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {GrowlViewComponent} from './showcase/growl-view/growl-view.component';
     GrowlViewComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

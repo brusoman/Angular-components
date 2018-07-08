@@ -1,6 +1,12 @@
 <div class="growl">
-  <div class="growl__icon"></div>
-  <div class="growl__title">{{growl.title}}</div>
-  <div class="growl__message">{{growl.message}}</div>
-  <button class="growl__button">Exit</button>
+  <div class="growl__icon">
+    <fa-icon [icon]="faCoffee" size="lg"></fa-icon>
+  </div>
+  <div class="growl__textarea">
+    <div class="growl__title">{{growl.title}}</div>
+    <div class="growl__message">{{growl.message}}</div>
+    <div class="growl__button">
+      <fa-icon [icon]="faTimes" size="xl"></fa-icon>
+    </div>
+  </div>
 </div>

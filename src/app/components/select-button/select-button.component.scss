@@ -1,5 +1,9 @@
 @import "../../colors";
 
+$color-succeed: "#5cb85c";
+$color-error: "#5cb85c";
+$color-info: "#5cb85c";
+
 .button {
   flex-direction: row;
   flex-wrap: wrap;
@@ -15,10 +19,10 @@
       display: none;
     }
   }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
+  &__img {
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin-left: 70px;
 
   }
