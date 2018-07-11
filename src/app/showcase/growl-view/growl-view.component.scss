@@ -1,10 +1,32 @@
+@import "../../colors";
+
 .view__button {
   color: white;
-  border: 5px solid #448b4e;
+  border: 5px solid $color-succeed;
   border-radius: 5px;
-  background-color: #448b4e;
+  background-color: $color-succeed;
   height: 27px;
   width: 92px;
   font-size: large;
   text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+
+  &_succeed {
+    @extend .view__button;
+    border: 5px solid $color-succeed;
+    background-color: $color-succeed;
+  }
+  &_info {
+    @extend .view__button;
+    border: 5px solid $color-info;
+    background-color: $color-info;
+  }
+  &_error {
+    @extend .view__button;
+    border: 5px solid $color-error;
+    background-color: $color-error;
+  }
+
 }

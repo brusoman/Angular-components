@@ -9,3 +9,8 @@ export const GROWLES: GrowlModel[] = [
   {title: "Info message", message: "Order submitted", type: "INFO"},
   {title: "Error message", message: "Order submitted", type: "ERROR",}
 ];
+export const GROWLES2: GrowlModel[] = [
+  {title: "Success message", message: "Order submitted growl 2", type: "SUCCESS"},
+  {title: "Info message", message: "Order submitted", type: "INFO"},
+  {title: "Error message growl 2", message: "Order submitted", type: "ERROR",}
+];

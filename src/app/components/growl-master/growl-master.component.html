@@ -1,0 +1,14 @@
+<h1>Growl master</h1>
+
+<!--<growl-component></growl-component>-->
+
+<ng-container *ngIf="msg">
+  <ng-container *ngFor="let growl of msg">
+    <growl-component [model]="growl"
+                     [timer]="50000"
+                     (onExitEvent)="destroyGrowl($event)"
+    ></growl-component>
+  </ng-container>
+
+</ng-container>
+
