@@ -1,14 +1,15 @@
 .growl {
   width: 320px;
   height: 66px;
-  position: fixed;
-  right: 0;
-  top: 0;
   background-color: #5cb85c;
   border: 1px solid #5cb85c;
   border-radius: 5px;
   color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
   &__button {
+    display: inline-block;
     position: absolute;
     top: 1px;
     right: 3px;
@@ -33,3 +34,17 @@
     font-size: 30px;
   }
 }
+
+.growl__succeed {
+  @extend .growl;
+}
+
+.growl__info {
+  @extend .growl
+}
+
+.growl__error {
+  @extend .growl
+}
+
+

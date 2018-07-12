@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {GrowlModel} from "./growl-model";
-import {faCheck, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {faCheck, faInfoCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'growl-component',
@@ -12,18 +12,29 @@ export class GrowlComponent implements OnInit {
   @Input() timer: number;
   @Output() onExitEvent: EventEmitter<GrowlModel> = new EventEmitter<GrowlModel>();
 
-  growl: GrowlModel;
-  faCheck = faCheck; //Type image
   exitButton = faTimes;// Button image
 
+  growlImage; // Card image
+
   ngOnInit() {
-    this.growl = this.model; // New test
-    //setTimeout(this.exit, 2000);TODO: вызов exit падает с ошибкой
+    switch (this.model.type) {
+      case "SUCCESS":
+        this.growlImage = faCheck;
+
+        break;
+      case "INFO":
+        this.growlImage = faInfoCircle;
+        break;
+      case "ERROR":
+        this.growlImage = faTimes;
+        break;
+    }
+    console.log(this.growlImage);
   }
 
   exit() {
 
     console.log("In GrowlComponent: Gonna exit");
-    this.onExitEvent.emit(this.growl);
+    this.onExitEvent.emit(this.model);
   }
 }
