@@ -1,29 +1,31 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {GROWLES, GrowlModel} from "../../components/growl/growl-model";
 
 @Component({
   selector: 'growl-view',
   templateUrl: './growl-view.component.html',
-  styleUrls: ['./growl-view.component.scss']
+  styleUrls: ['./growl-view.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class GrowlViewComponent implements OnInit {
-  growlArray: GrowlModel[] = GROWLES;
+  growlArray: GrowlModel[] = GROWLES.slice();
 
   ngOnInit(): void {
 
   }
 
-  showSucceed(messages: GrowlModel[]) {
-    this.growlArray.push(GROWLES[0]); //TODO: NOT WORK!
+  showSucceed() {
+    this.growlArray.push(GROWLES[0]);
   }
 
   showInfo() {
-    this.growlArray.push(GROWLES[1]);//TODO: NOT WORK!
+    this.growlArray.push(GROWLES[1]);
   }
 
   showError() {
 
-    this.growlArray.push(GROWLES[2]);//TODO: NOT WORK!
+    this.growlArray.push(GROWLES[2]);
 
   }
 }

@@ -1,13 +1,15 @@
+@import "../../colors";
 .growl {
   width: 320px;
   height: 66px;
   background-color: #5cb85c;
-  border: 1px solid #5cb85c;
+  //border: 1px solid #5cb85c;
   border-radius: 5px;
   color: white;
   display: flex;
   flex-direction: row;
   position: relative;
+
   &__button {
     display: inline-block;
     position: absolute;
