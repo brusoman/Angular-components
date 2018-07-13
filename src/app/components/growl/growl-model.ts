@@ -5,12 +5,8 @@ export class GrowlModel {
 }
 
 export const GROWLES: GrowlModel[] = [
-  {title: "Success message", message: "Order submitted", type: "SUCCESS"},
-  {title: "Info message", message: "Order submitted", type: "INFO"},
-  {title: "Error message", message: "Order submitted", type: "ERROR",}
+  {title: "Success message", message: "Order submitted", type: "succeed"},
+  {title: "Info message", message: "Order submitted", type: "info"},
+  {title: "Error message", message: "Order submitted", type: "error",}
 ];
-export const GROWLES2: GrowlModel[] = [
-  {title: "Success message", message: "Order submitted growl 2", type: "SUCCESS"},
-  {title: "Info message", message: "Order submitted", type: "INFO"},
-  {title: "Error message growl 2", message: "Order submitted", type: "ERROR",}
-];
+

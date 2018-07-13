@@ -22,16 +22,16 @@ export class GrowlComponent implements OnInit {
     switch (this.model.type) {
       case "SUCCESS":
         this.growlImage = faCheck;
-        this.backgroundColor = '$color-succeed';
+        // this.backgroundColor = '$color-succeed';
         break;
       case "INFO":
         this.growlImage = faInfoCircle;
-        this.backgroundColor = '$color-info';
+        // this.backgroundColor = '$color-info';
 
         break;
       case "ERROR":
         this.growlImage = faTimes;
-        this.backgroundColor = '$color-error';
+        // this.backgroundColor = '$color-error';
 
         break;
     }

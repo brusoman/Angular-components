@@ -1,7 +1,7 @@
-<div class="growl" [style.background-color]="backgroundColor">
-  <div class="growl__icon">
-    <fa-icon [icon]="growlImage" size="lg"></fa-icon>
-  </div>
+<div class="growl growl_{{model.type}}" [style.background-color]="backgroundColor"
+
+>
+  <div class="fas growl__icon"></div>
   <div class="growl__textarea">
     <div class="growl__title">{{model?.title}}</div>
     <div class="growl__message">{{model?.message}}</div>
