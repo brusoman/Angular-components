@@ -1,10 +1,5 @@
 @import "../../colors";
-@import "../../../../scss/fontawesome.scss";
-@import "../../../../scss/variables";
-@import "../../../../scss/core";
-@import "../../../../scss/icons";
-//@import "../../../../scss/"
-$fa-font-path: "../../../../webfonts/";
+@import "~font-awesome/scss/variables";
 .growl {
   width: 320px;
   height: 66px;
@@ -47,44 +42,41 @@ $fa-font-path: "../../../../webfonts/";
     background-color: #5cb85c;
 
     .growl__icon {
-      @extend .fas;
-      @include fa-icon;
 
       &:before {
-        //content: fa-content($fa-var-calculator);
-        content: fa-content($fa-var-times);
+        content: "\f00d";
       }
     }
 
   }
-
-  &_info {
-    @extend .growl;
-    background-color: $color-info;
-
-    .growl__icon {
-      @extend .fas;
-      @include fa-icon;
-
-      &:before {
-        content: fa-content($fa-var-info-circle);
-      }
-    }
-  }
-
-  &_error {
-    @extend .growl;
-    background-color: $color-error;
-
-    .growl__icon {
-      @extend .fas;
-      @include fa-icon;
-
-      &:before {
-        content: fa-content($fa-var-times);
-      }
-    }
-  }
+  //
+  //&_info {
+  //  @extend .growl;
+  //  background-color: $color-info;
+  //
+  //  .growl__icon {
+  //    //@extend .fas;
+  //    @include fa-icon;
+  //
+  //    &:before {
+  //      content: $fa-var-info-circle;
+  //    }
+  //  }
+  //}
+  //
+  //&_error {
+  //  @extend .growl;
+  //  background-color: $color-error;
+  //
+  //  .growl__icon {
+  //    //@extend .fas;
+  //    @include fa-icon;
+  //
+  //    &:before {
+  //      content: $fa-var-times;
+  //    }
+  //  }
+  //}
 
 }
 

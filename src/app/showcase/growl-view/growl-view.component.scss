@@ -1,6 +1,6 @@
 @import "../../colors";
-@import "../../../../scss/fontawesome.scss";
-@import "../../../../scss/core";
+//@import "../../../../scss/fontawesome.scss";
+//@import "../../../../scss/core";
 
 .view__button {
   color: white;
@@ -39,11 +39,11 @@
   top: 0;
 }
 
-.typo {
-  @extend .fas;
-  @include fa-icon;
+//.typo {
+//  @extend .fas;
+//  @include fa-icon;
+//
+//  &:before {
+//    content: fa-content($fa-var-user);
+//  }
 
-  &:before {
-    content: fa-content($fa-var-user);
-  }
-}
