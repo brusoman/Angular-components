@@ -1,5 +1,15 @@
 @import "../../colors";
+@import "../../../../node_modules/font-awesome/scss/variables";
 
+.fontAwesome {
+
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .dialog {
   width: 350px;
   min-width: 200px;
@@ -17,11 +27,21 @@
     min-height: 60px;
     background-color: $dialog__title-color;
     border-bottom: 1px solid $dialog-border-color;
+    .dialog__title {
+      font-size: 20px;
+      margin: 20px 30px;
+
+    }
   }
   &__button-exit {
+    @extend .fontAwesome;
     display: inline-block;
     position: absolute;
     right: 0px;
+    margin: 5px;
+    &:before {
+      content: "\f00d";
+    }
   }
   &__textarea {
     margin: 10px;
@@ -37,14 +57,34 @@
     border-top: 1px solid $dialog-border-color;
     position: relative;
     .dialog__button-yes {
+      min-width: 75px;
+      min-height: 30px;
+      text-align: center;
+      padding-top: 5px;
+      border: 1px solid #2399e5;
+      border-radius: 3px;
+      color: #FFFFFF;
+      background: #2399e5;
       display: inline-block;
       position: absolute;
-      right: 0px;
+      right: 80px;
+      margin-right: 10px;
+      @extend .fontAwesome;
+      font-size: 20px;
+      margin-top: 5px;
+      &:before {
+        content: "\f00c";
+      }
     }
     .dialog__button-no {
-      display: inline-block;
-      position: absolute;
+      @extend .dialog__button-yes;
+      border: 1px solid $dialog-border-color;
       right: 0px;
+      background: white;
+      color: black;
+      &:before {
+        content: "\f00d";
+      }
     }
   }
 }
