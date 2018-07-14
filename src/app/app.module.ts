@@ -10,6 +10,7 @@ import {GrowlComponent} from './components/growl/growl-item/growl.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {GrowlMasterComponent} from './components/growl/growl-master/growl-master.component';
 import {GrowlShowcaseComponent} from './showcase/growl-showcase/growl-showcase.component';
+import {DemonstrationPageComponent} from './showcase/demonstration-page/demonstration-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {GrowlShowcaseComponent} from './showcase/growl-showcase/growl-showcase.c
     SelectButtonViewComponent,
     GrowlComponent,
     GrowlMasterComponent,
-    GrowlShowcaseComponent
+    GrowlShowcaseComponent,
+    DemonstrationPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+.dem {
+  &__dummy {
+    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
+    height: 70px;
+  }
+  &__top-menu {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: #20272a;
+    color: white;
+    text-align: left;
+    font-size: 25px;
+    opacity: 0.9;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+  }
+
+  &__titlebox {
+    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
+    color: #fff;
+    height: 150px;
+    //margin-top: 70px;
+    border-bottom: 1px solid #dde3e6;
+    .dem__content-section {
+      padding: 30px;
+      .dem__feature-title {
+        font-size: 35px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .dem__feature-info {
+        font-size: 19px;
+      }
+
+    }
+  }
+}

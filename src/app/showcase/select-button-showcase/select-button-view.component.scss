@@ -1,9 +1,6 @@
 @import "../../colors";
+
 .button {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: $button-color;
   &__list {
 
     &_show {
@@ -11,13 +8,12 @@
 
       flex-direction: row;
 
-      display: none;
     }
   }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
+  &__img {
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin-left: 70px;
 
   }

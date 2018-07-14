@@ -2,8 +2,9 @@
 
 
 .button {
+  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   color: $button-color;
   &__list {
     display: flex;
