@@ -1,0 +1,11 @@
+<ng-container *ngIf="msg">
+  <ng-container *ngFor="let growl of msg">
+    <growl-component [model]="growl"
+                     [timer]="500000"
+                     (onExitEvent)="destroyGrowl($event)"
+
+    ></growl-component>
+  </ng-container>
+
+</ng-container>
+

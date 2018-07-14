@@ -1,11 +1,12 @@
 @import "../../colors";
 
+
 .button {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   color: $button-color;
   &__list {
+    display: flex;
     background-color: $button__list-color;
     padding: 100px 100px;
     border-radius: 20px;
@@ -15,10 +16,10 @@
       display: none;
     }
   }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
+  &__img {
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin-left: 70px;
 
   }

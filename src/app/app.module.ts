@@ -6,6 +6,11 @@ import {SelectButtonComponent} from './components/select-button/select-button.co
 import {SelectButtonViewComponent} from './showcase/select-button-view/select-button-view.component';
 import {DialogComponent} from './components/dialog/dialog.component';
 import {DialogShowcaseComponent} from './showcase/dialog-showcase/dialog-showcase.component';
+import {SelectButtonViewComponent} from './showcase/select-button-showcase/select-button-view.component';
+import {GrowlComponent} from './components/growl/growl-item/growl.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {GrowlMasterComponent} from './components/growl/growl-master/growl-master.component';
+import {GrowlShowcaseComponent} from './showcase/growl-showcase/growl-showcase.component';
 
 @NgModule({
   declarations: [
@@ -14,9 +19,14 @@ import {DialogShowcaseComponent} from './showcase/dialog-showcase/dialog-showcas
     SelectButtonViewComponent,
     DialogComponent,
     DialogShowcaseComponent
+    SelectButtonViewComponent,
+    GrowlComponent,
+    GrowlMasterComponent,
+    GrowlShowcaseComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
