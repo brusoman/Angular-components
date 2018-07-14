@@ -21,8 +21,7 @@ export class GrowlComponent implements OnInit {
   }
 
   exit() {
-
-    console.log("In GrowlComponent: Gonna exit");
+    // console.log("In GrowlComponent: Gonna exit");
     this.onExitEvent.emit(this.model);
   }
 }

@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {GrowlViewComponent} from './growl-view.component';
+import {GrowlShowcaseComponent} from './growl-showcase.component';
 
-describe('GrowlViewComponent', () => {
-  let component: GrowlViewComponent;
-  let fixture: ComponentFixture<GrowlViewComponent>;
+describe('GrowlShowcaseComponent', () => {
+  let component: GrowlShowcaseComponent;
+  let fixture: ComponentFixture<GrowlShowcaseComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GrowlViewComponent]
+      declarations: [GrowlShowcaseComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrowlViewComponent);
+    fixture = TestBed.createComponent(GrowlShowcaseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

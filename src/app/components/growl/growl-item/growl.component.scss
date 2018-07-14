@@ -1,5 +1,5 @@
-@import "../../colors";
-@import "~font-awesome/scss/variables";
+@import "../../../colors";
+@import "../../../../../node_modules/font-awesome/scss/variables";
 
 .fontAwesome {
 
@@ -13,20 +13,25 @@
 .growl {
   width: 320px;
   height: 66px;
-  background-color: grey; //TODO разобраться
-  //border: 1px solid #5cb85c;
+  background-color: grey;
   border-radius: 5px;
   color: white;
   display: flex;
   flex-direction: row;
   position: relative;
 
-  &__button {
+  &__button-exit {
+    @extend .fontAwesome;
     display: inline-block;
     position: absolute;
     top: 1px;
     right: 3px;
     cursor: pointer;
+    font-size: 20px;
+    &:before {
+      content: "\f00d";
+    }
+
   }
   &__textarea {
     display: inline-block;
