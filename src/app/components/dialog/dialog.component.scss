@@ -16,11 +16,15 @@
     min-width: 200px;
     min-height: 60px;
     background-color: $dialog__title-color;
+    border-bottom: 1px solid $dialog-border-color;
   }
   &__button-exit {
     display: inline-block;
     position: absolute;
     right: 0px;
+  }
+  &__textarea {
+    margin: 10px;
   }
   &__text {
 
