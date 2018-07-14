@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {GrowlModel} from "./growl-model";
-import {faCheck, faInfoCircle, faTimes} from '@fortawesome/free-solid-svg-icons';
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'growl-component',
@@ -16,26 +16,8 @@ export class GrowlComponent implements OnInit {
 
   exitButton = faTimes;// Button image
 
-  growlImage; // Card image
-  backgroundColor;
   ngOnInit() {
-    switch (this.model.type) {
-      case "SUCCESS":
-        this.growlImage = faCheck;
-        // this.backgroundColor = '$color-succeed';
-        break;
-      case "INFO":
-        this.growlImage = faInfoCircle;
-        // this.backgroundColor = '$color-info';
-
-        break;
-      case "ERROR":
-        this.growlImage = faTimes;
-        // this.backgroundColor = '$color-error';
-
-        break;
-    }
-    console.log(this.growlImage);
+    setTimeout(() => this.onExitEvent.emit(this.model), this.timer);
   }
 
   exit() {

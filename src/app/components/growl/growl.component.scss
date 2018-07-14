@@ -1,5 +1,15 @@
 @import "../../colors";
 @import "~font-awesome/scss/variables";
+
+.fontAwesome {
+
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .growl {
   width: 320px;
   height: 66px;
@@ -42,41 +52,43 @@
     background-color: #5cb85c;
 
     .growl__icon {
-
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
       &:before {
-        content: "\f00d";
+        content: "\f00c";
       }
     }
 
   }
-  //
-  //&_info {
-  //  @extend .growl;
-  //  background-color: $color-info;
-  //
-  //  .growl__icon {
-  //    //@extend .fas;
-  //    @include fa-icon;
-  //
-  //    &:before {
-  //      content: $fa-var-info-circle;
-  //    }
-  //  }
-  //}
-  //
-  //&_error {
-  //  @extend .growl;
-  //  background-color: $color-error;
-  //
-  //  .growl__icon {
-  //    //@extend .fas;
-  //    @include fa-icon;
-  //
-  //    &:before {
-  //      content: $fa-var-times;
-  //    }
-  //  }
-  //}
+
+  &_info {
+    @extend .growl;
+    background-color: $color-info;
+
+    .growl__icon {
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
+      &:before {
+        content: "\f05a";
+      }
+    }
+  }
+
+  &_error {
+    @extend .growl;
+    background-color: $color-error;
+
+    .growl__icon {
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
+      &:before {
+        content: "\f00d";
+      }
+    }
+  }
 
 }
 
