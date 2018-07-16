@@ -1,15 +1,7 @@
 @import "../../colors";
 @import "../../../../node_modules/font-awesome/scss/variables";
+@import "../growl/growl-item/growl-item.component";
 
-.fontAwesome {
-
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .dialog {
   width: 350px;
   min-width: 200px;
@@ -19,7 +11,16 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
   display: inline-block;
   position: fixed;
+  top: 25%;
+  left: 25%;
   margin: auto;
+  background-color: white;
+  //display: none;
+  &_hidden {
+    @extend .dialog;
+    display: none;
+  }
+
   &__titlebar {
     display: inline-block;
     width: 350px;
@@ -39,6 +40,7 @@
     position: absolute;
     right: 0px;
     margin: 5px;
+    cursor: pointer;
     &:before {
       content: "\f00d";
     }
@@ -72,6 +74,7 @@
       @extend .fontAwesome;
       font-size: 20px;
       margin-top: 5px;
+      cursor: pointer;
       &:before {
         content: "\f00c";
       }

@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {GrowlComponent} from './growl.component';
+import {GrowlItemComponent} from './growl-item.component';
 
-describe('GrowlComponent', () => {
-  let component: GrowlComponent;
-  let fixture: ComponentFixture<GrowlComponent>;
+describe('GrowlItemComponent', () => {
+  let component: GrowlItemComponent;
+  let fixture: ComponentFixture<GrowlItemComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GrowlComponent]
+      declarations: [GrowlItemComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrowlComponent);
+    fixture = TestBed.createComponent(GrowlItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

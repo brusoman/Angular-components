@@ -1,1 +1,9 @@
-<dialog-component [model]="model"></dialog-component>
+<div class="dem__titlebox">
+  <div class="dem__content-section">
+    <div class="dem__feature-title">Dialog</div>
+    <div class="dem__feature-info">Dialog is a container to display content in an overlay window.</div>
+
+  </div>
+</div>
+<div class="view__button_info" (click)="displayDialog()">Show</div>
+<dialog-component [model]="model" [display]="display"></dialog-component>

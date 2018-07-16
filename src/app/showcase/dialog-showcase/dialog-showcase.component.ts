@@ -7,7 +7,8 @@ import {TEST_DIALOG} from "../../components/dialog/dialog.model";
   styleUrls: ['./dialog-showcase.component.scss']
 })
 export class DialogShowcaseComponent implements OnInit {
-  model
+  model;
+  display: boolean = true;
   constructor() {
   }
 
@@ -16,4 +17,8 @@ export class DialogShowcaseComponent implements OnInit {
 
   }
 
+  displayDialog() {
+    this.display = !this.display;
+
+  }
 }

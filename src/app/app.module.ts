@@ -2,32 +2,34 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
-import {SelectButtonComponent} from './components/select-button/select-button.component';
 import {SelectButtonViewComponent} from './showcase/select-button-showcase/select-button-view.component';
-import {DialogComponent} from './components/dialog/dialog.component';
 import {DialogShowcaseComponent} from './showcase/dialog-showcase/dialog-showcase.component';
-import {GrowlComponent} from './components/growl/growl-item/growl.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {GrowlMasterComponent} from './components/growl/growl-master/growl-master.component';
 import {GrowlShowcaseComponent} from './showcase/growl-showcase/growl-showcase.component';
 import {DemonstrationPageComponent} from './showcase/demonstration-page/demonstration-page.component';
+import {RouterModule} from "@angular/router";
+import {appRoutes} from "./routes";
+import {GrowlModule} from "./components/growl/growl.module";
+import {SelectButtonModule} from "./components/select-button/select-button.module";
+import {DialogModule} from "./components/dialog/dialog.module";
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SelectButtonComponent,
-    SelectButtonViewComponent,
-    DialogComponent,
     DialogShowcaseComponent,
     SelectButtonViewComponent,
-    GrowlComponent,
-    GrowlMasterComponent,
     GrowlShowcaseComponent,
-    DemonstrationPageComponent
+    DemonstrationPageComponent,
+
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule.forRoot(appRoutes),
+    GrowlModule,
+    SelectButtonModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

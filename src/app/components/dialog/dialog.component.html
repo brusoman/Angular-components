@@ -1,6 +1,6 @@
-<div class="dialog">
+<div class="dialog" [class.dialog_hidden]="display">
   <div class="dialog__titlebar">
-    <div class="dialog__button-exit"></div>
+    <div class="dialog__button-exit" (click)="no()"></div>
     <div class="dialog__title">{{model.title}}</div>
 
   </div>
@@ -10,8 +10,8 @@
     </div>
   </div>
   <div class="dialog__button-section">
-    <div class="dialog__button-yes"> Yes</div>
-    <div class="dialog__button-no"> No</div>
+    <div class="dialog__button-yes" (click)="yes()"> Yes</div>
+    <div class="dialog__button-no" (click)="no()"> No</div>
 
 
   </div>
