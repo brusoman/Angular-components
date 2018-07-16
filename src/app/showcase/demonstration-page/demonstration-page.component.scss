@@ -1,3 +1,4 @@
+@import "../../components/growl/growl-item/growl-item.component";
 .dem {
   &__dummy {
     background: linear-gradient(-45deg, #67d8ec, #1b81d7);
@@ -23,7 +24,39 @@
         margin: 20px 10px;
       }
     }
+
+    a.dem__github {
+      @extend .fontAwesome;
+      display: inline-block;
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      cursor: pointer;
+      font-size: 50px;
+      margin-top: 10px;
+      margin-right: 5px;
+      color: white;
+      text-decoration: none;
+      &:before {
+        content: "\f09b";
+      }
+    }
   }
+  //a&__github{
+  //  @extend .fontAwesome;
+  //  display: inline-block;
+  //  position: absolute;
+  //  top: 1px;
+  //  right: 3px;
+  //  cursor: pointer;
+  //  font-size: 50px;
+  //  margin-top: 10px;
+  //  margin-right: 5px;
+  //  &:before {
+  //    content: "\f09b";
+  //  }
+
+
 
   &__titlebox {
     background: linear-gradient(-45deg, #67d8ec, #1b81d7);
