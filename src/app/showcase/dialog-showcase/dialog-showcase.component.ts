@@ -1,24 +1,25 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {TEST_DIALOG} from "../../components/dialog/dialog.model";
 
 @Component({
   selector: 'dialog-showcase',
   templateUrl: './dialog-showcase.component.html',
-  styleUrls: ['./dialog-showcase.component.scss']
+  styleUrls: ['./dialog-showcase.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DialogShowcaseComponent implements OnInit {
-  model;
-  display: boolean = true;
+  _model;
+  _display: boolean = true;
   constructor() {
   }
 
   ngOnInit() {
-    this.model = JSON.parse(JSON.stringify(TEST_DIALOG));
+    this._model = JSON.parse(JSON.stringify(TEST_DIALOG));
 
   }
 
   displayDialog() {
-    this.display = !this.display;
+    this._display = !this._display;
 
   }
 }

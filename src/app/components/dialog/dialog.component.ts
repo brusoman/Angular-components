@@ -1,10 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {DialogModel} from "./dialog.model";
 
 @Component({
   selector: 'dialog-component',
   templateUrl: './dialog.component.html',
-  styleUrls: ['./dialog.component.scss']
+  styleUrls: ['./dialog.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DialogComponent implements OnInit {
   @Input() model: DialogModel;

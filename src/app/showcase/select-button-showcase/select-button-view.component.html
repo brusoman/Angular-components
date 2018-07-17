@@ -13,7 +13,7 @@
   <div class="button__list">
     <h3>Multiple selection</h3>
 
-    <select-button-component [options]="options" (onSelect)="getSelectedOptionsMultiple($event)"
+    <select-button-component [options]="_options" (onSelect)="getSelectedOptionsMultiple($event)"
                              [multiple]="true"
                              [outTemplate]="outTemplate">
       <ng-template #outTemplate class="">
@@ -26,10 +26,10 @@
 
     <div class="button__list_show">
       <p>Selected Types:</p>
-      <ng-container *ngIf="selectedOptionsMultiple">
+      <ng-container *ngIf="_selectedOptionsMultiple">
 
 
-        <ng-container *ngFor="let select of selectedOptionsMultiple">
+        <ng-container *ngFor="let select of _selectedOptionsMultiple">
 
           <div *ngIf="select.isSelected" class="button__option">
 
@@ -41,32 +41,32 @@
 
       </ng-container>
     </div>
-    <div>
+
+  </div>
+</div>
+<div class="single">
+  <div class="button__list">
+    <h3>Single selection</h3>
+
+    <select-button-component [options]="_options2" (onSelect)="getSelectedOptionsSingle($event)"
+                             [multiple]="false"></select-button-component>
+
+    <div class="button__list_show">
+      <p>Selected Type:</p>
+      <ng-container *ngIf="_selectedOptionsSingle">
+
+
+        <ng-container *ngFor="let select of _selectedOptionsSingle">
+
+          <div *ngIf="select.isSelected" class="button__option">
+
+            <span class="button__label_show">{{select.label}}</span>
+          </div>
+
+
+        </ng-container>
+      </ng-container>
     </div>
-
-    <div class="single">
-      <div class="button__list">
-        <h3>Single selection</h3>
-
-        <select-button-component [options]="options2" (onSelect)="getSelectedOptionsSingle($event)"
-                                 [multiple]="false"></select-button-component>
-
-        <div class="button__list_show">
-          <p>Selected Type:</p>
-          <ng-container *ngIf="selectedOptionsSingle">
-
-
-            <ng-container *ngFor="let select of selectedOptionsSingle">
-
-              <div *ngIf="select.isSelected" class="button__option">
-
-                <span class="button__label_show">{{select.label}}</span>
-              </div>
-
-
-            </ng-container>
-          </ng-container>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 

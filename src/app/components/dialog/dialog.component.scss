@@ -15,7 +15,7 @@
   left: 25%;
   margin: auto;
   background-color: white;
-  //display: none;
+  //_display: none;
   &_hidden {
     @extend .dialog;
     display: none;
@@ -38,7 +38,7 @@
     @extend .fontAwesome;
     display: inline-block;
     position: absolute;
-    right: 0px;
+    right: 0;
     margin: 5px;
     cursor: pointer;
     &:before {
@@ -82,7 +82,7 @@
     .dialog__button-no {
       @extend .dialog__button-yes;
       border: 1px solid $dialog-border-color;
-      right: 0px;
+      right: 0;
       background: white;
       color: black;
       &:before {

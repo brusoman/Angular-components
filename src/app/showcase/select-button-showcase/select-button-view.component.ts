@@ -8,11 +8,11 @@ import {OptionModel} from "../../components/select-button/select-button.model";
   styleUrls: ['./select-button-view.component.scss']
 })
 export class SelectButtonViewComponent implements OnInit {
-  options = OBJ_OPTIONS;
-  options2 = OBJ_OPTIONS2;
+  _options = OBJ_OPTIONS;
+  _options2 = OBJ_OPTIONS2;
 
-  selectedOptionsMultiple: OptionModel[];
-  selectedOptionsSingle: OptionModel[];
+  _selectedOptionsMultiple: OptionModel[];
+  _selectedOptionsSingle: OptionModel[];
 
   constructor() {
   }
@@ -21,10 +21,10 @@ export class SelectButtonViewComponent implements OnInit {
   }
 
   getSelectedOptionsMultiple(options: OptionModel[]) {
-    this.selectedOptionsMultiple = options;
+    this._selectedOptionsMultiple = options;
   }
 
   getSelectedOptionsSingle(options: OptionModel[]) {
-    this.selectedOptionsSingle = options;
+    this._selectedOptionsSingle = options;
   }
 }

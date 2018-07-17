@@ -8,23 +8,23 @@ import {GROWLES, GrowlModel} from "../../components/growl/growl-item/growl-model
   encapsulation: ViewEncapsulation.None
 })
 export class GrowlShowcaseComponent implements OnInit {
-  growlArray: GrowlModel[] = GROWLES.slice();
+  _growlArray: GrowlModel[] = GROWLES.slice();
 
   ngOnInit(): void {
 
   }
 
   showSucceed() {
-    this.growlArray.push(GROWLES[0]);
+    this._growlArray.push(GROWLES[0]);
   }
 
   showInfo() {
-    this.growlArray.push(GROWLES[1]);
+    this._growlArray.push(GROWLES[1]);
   }
 
   showError() {
 
-    this.growlArray.push(GROWLES[2]);
+    this._growlArray.push(GROWLES[2]);
 
   }
 }
