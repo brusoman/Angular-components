@@ -28,7 +28,7 @@
     cursor: pointer;
     font-size: 20px;
     &:before {
-      content: "\f00d";
+      content: $fa-var-times;
     }
 
   }
@@ -60,7 +60,7 @@
       font-size: 50px;
       margin-top: 5px;
       &:before {
-        content: "\f00c";
+        content: $fa-var-check;
       }
     }
 
@@ -75,7 +75,7 @@
       font-size: 50px;
       margin-top: 5px;
       &:before {
-        content: "\f05a";
+        content: $fa-var-info-circle;
       }
     }
   }
@@ -89,7 +89,7 @@
       font-size: 50px;
       margin-top: 5px;
       &:before {
-        content: "\f00d";
+        content: $fa-var-times;
       }
     }
   }

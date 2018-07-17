@@ -1,20 +1,20 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {GrowlMasterComponent} from './growl-master.component';
+import {GrowlComponent} from './growl.component';
 
-describe('GrowlMasterComponent', () => {
-  let component: GrowlMasterComponent;
-  let fixture: ComponentFixture<GrowlMasterComponent>;
+describe('GrowlComponent', () => {
+  let component: GrowlComponent;
+  let fixture: ComponentFixture<GrowlComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [GrowlMasterComponent]
+      declarations: [GrowlComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GrowlMasterComponent);
+    fixture = TestBed.createComponent(GrowlComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

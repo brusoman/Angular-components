@@ -1,15 +1,15 @@
 import {GrowlItemComponent} from "./growl-item/growl-item.component";
-import {GrowlMasterComponent} from "./growl-master/growl-master.component";
+import {GrowlComponent} from "./growl-master/growl.component";
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 
 @NgModule({
   declarations: [
     GrowlItemComponent,
-    GrowlMasterComponent
+    GrowlComponent
   ],
   imports: [CommonModule],
-  exports: [GrowlMasterComponent]
+  exports: [GrowlComponent]
 
 })
 export class GrowlModule {

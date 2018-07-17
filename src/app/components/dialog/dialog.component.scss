@@ -42,7 +42,7 @@
     margin: 5px;
     cursor: pointer;
     &:before {
-      content: "\f00d";
+      content: $fa-var-times;
     }
   }
   &__textarea {
@@ -76,7 +76,7 @@
       margin-top: 5px;
       cursor: pointer;
       &:before {
-        content: "\f00c";
+        content: $fa-var-check;
       }
     }
     .dialog__button-no {
@@ -86,7 +86,7 @@
       background: white;
       color: black;
       &:before {
-        content: "\f00d";
+        content: $fa-var-times;
       }
     }
   }
