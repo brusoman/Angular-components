@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {GrowlModel} from "./growl-model";
-import {faTimes} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'growl-component',
@@ -14,15 +13,17 @@ export class GrowlComponent implements OnInit {
   @Input() timer: number;
   @Output() onExit: EventEmitter<GrowlModel> = new EventEmitter<GrowlModel>();
 
-  exitButton = faTimes;// Button image
-
+  _hidden: boolean = false;
   ngOnInit() {
-    setTimeout(this.exit.bind(this), this.timer);
+
+    setTimeout(this.exit.bind(this), 10000);
   }
 
   exit() {
+    this._hidden = true;
+    setTimeout(() => this.onExit.emit(this.model), 2000);
     console.log("In GrowlComponent: Gonna exit");
-    this.onExit.emit(this.model);
+    // this.onExit.emit(this.model);
 
   }
 }

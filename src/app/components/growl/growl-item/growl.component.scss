@@ -9,9 +9,6 @@
   text-rendering: auto;
 }
 .growl {
-  transition-property: background-color;
-  transition-duration: 5s;
-
   width: 320px;
   height: 66px;
   background-color: grey;
@@ -20,8 +17,7 @@
   display: flex;
   flex-direction: row;
   position: relative;
-
-
+  margin-bottom: 5px;
   &__button-exit {
     @extend .fontAwesome;
     display: inline-block;
@@ -97,9 +93,8 @@
     }
   }
   &_close {
-    transition-property: background-color;
-    transition-duration: 3s;
-    background-color: white;
+    transition: opacity 3s cubic-bezier(0, .5, .5, 1);
+    opacity: 0;
   }
 
 }
