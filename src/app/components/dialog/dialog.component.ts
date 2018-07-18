@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {DialogModel} from "./dialog.model";
 
 @Component({
@@ -10,6 +10,7 @@ import {DialogModel} from "./dialog.model";
 export class DialogComponent implements OnInit {
   @Input() model: DialogModel;
   @Input() display: boolean;
+  @Output() displayChange = new EventEmitter<boolean>();
 
   constructor() {
   }
@@ -19,15 +20,16 @@ export class DialogComponent implements OnInit {
 
   yes() {
     this.hide();
-    console.log("Yes");
   }
 
   no() {
+    console.log("No");
     this.hide();
   }
 
   hide() {
-    this.display = false;
+    this.display = !this.display;
+    this.displayChange.emit(this.display);
     console.log(this.display);
   }
 }

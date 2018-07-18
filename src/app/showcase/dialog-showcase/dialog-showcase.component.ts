@@ -9,7 +9,7 @@ import {TEST_DIALOG} from "../../components/dialog/dialog.model";
 })
 export class DialogShowcaseComponent implements OnInit {
   _model;
-  _display: boolean = true;
+  _display: boolean = false;
   constructor() {
   }
 
