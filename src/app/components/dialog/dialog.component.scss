@@ -19,12 +19,10 @@
   transition: opacity 3s;
   opacity: 1;
 
-  //_display: none;
   &_hidden {
     @extend .dialog;
     transition: display 0s 3s, opacity 3s;
     opacity: 0;
-    //display: none;
   }
 
   &__titlebar {
@@ -61,7 +59,6 @@
     width: 350px;
     min-width: 200px;
     min-height: 60px;
-    //background-color: #d6d6d6;
     border-top: 1px solid $dialog-border-color;
     position: relative;
     .dialog__button-yes {
