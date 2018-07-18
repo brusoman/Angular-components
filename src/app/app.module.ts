@@ -12,6 +12,8 @@ import {appRoutes} from "./routes";
 import {GrowlModule} from "./components/growl/growl.module";
 import {SelectButtonModule} from "./components/select-button/select-button.module";
 import {DialogModule} from "./components/dialog/dialog.module";
+import {SelectButtonComponent} from "./components/select-button/select-button.component";
+import {ConsoleComponent, ConsolePipe} from "./components/console/console.component";
 
 
 @NgModule({
@@ -21,7 +23,10 @@ import {DialogModule} from "./components/dialog/dialog.module";
     SelectButtonViewComponent,
     GrowlShowcaseComponent,
     DemonstrationPageComponent,
-
+    SelectButtonComponent,
+    SelectButtonViewComponent,
+    ConsoleComponent,
+    ConsolePipe
   ],
   imports: [
     BrowserModule,
