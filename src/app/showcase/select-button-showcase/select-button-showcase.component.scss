@@ -1,23 +1,16 @@
 @import "../../colors";
-@import "../../components/select-button/select-button.component";
-
+@import "../demonstration-page/demonstration-page.component";
 .button {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  color: $button-color;
   &__list {
-
     &_show {
       display: flex;
       flex-direction: row;
-
     }
   }
-  &__img{
-    position	: relative;
-    width		: 70px;
-    height		: 70px;
+  &__img {
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin-left: 70px;
 
   }

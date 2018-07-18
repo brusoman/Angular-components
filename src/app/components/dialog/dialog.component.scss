@@ -21,7 +21,7 @@
 
   &_hidden {
     @extend .dialog;
-    transition: display 0s 3s, opacity 3s;
+    transition: opacity 3s;
     opacity: 0;
   }
 
