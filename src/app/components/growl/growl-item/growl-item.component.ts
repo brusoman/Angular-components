@@ -6,18 +6,20 @@ import {GrowlModel} from "./growl-model";
   templateUrl: './growl-item.component.html',
   styleUrls: ['./growl-item.component.scss'],
   encapsulation: ViewEncapsulation.None,
-
 })
 export class GrowlItemComponent implements OnInit {
   @Input() model: GrowlModel;
   @Input() timer: number;
-  @Output() onExitEvent: EventEmitter<GrowlModel> = new EventEmitter<GrowlModel>();
+  @Output() onExit: EventEmitter<GrowlModel> = new EventEmitter<GrowlModel>();
 
+  _hidden: boolean = false;
   ngOnInit() {
-    setTimeout(() => this.onExitEvent.emit(this.model), this.timer);
+    setTimeout(this.exit.bind(this), 10000);
   }
 
   exit() {
-    this.onExitEvent.emit(this.model);
+    this._hidden = true;
+    setTimeout(() => this.onExit.emit(this.model), 2000);
+    console.log("In GrowlComponent: Gonna exit");
   }
 }
