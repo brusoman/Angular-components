@@ -9,6 +9,8 @@
 <dialog-component [model]="_model" [(display)]="_display">
   <div class="dialog__button-content">
 
+    <div class="dialog__button-yes" (click)="_display = false"> Yes</div>
+    <div class="dialog__button-no" (click)="_display = false"> No</div>
 
   </div>
 </dialog-component>

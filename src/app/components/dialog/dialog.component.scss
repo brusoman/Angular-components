@@ -15,10 +15,16 @@
   left: 25%;
   margin: auto;
   background-color: white;
+
+  transition: opacity 3s;
+  opacity: 1;
+
   //_display: none;
   &_hidden {
     @extend .dialog;
-    display: none;
+    transition: display 0s 3s, opacity 3s;
+    opacity: 0;
+    //display: none;
   }
 
   &__titlebar {
