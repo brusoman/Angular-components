@@ -11,6 +11,7 @@ import {GrowlModule} from "./components/growl/growl.module";
 import {SelectButtonModule} from "./components/select-button/select-button.module";
 import {DialogModule} from "./components/dialog/dialog.module";
 import {appRoutes} from "./routes";
+import {ConsoleModule} from "./components/console/console.module";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {appRoutes} from "./routes";
     RouterModule.forRoot(appRoutes),
     GrowlModule,
     SelectButtonModule,
-    DialogModule
+    DialogModule,
+    ConsoleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

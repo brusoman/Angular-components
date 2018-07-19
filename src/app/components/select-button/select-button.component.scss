@@ -1,10 +1,9 @@
-@import "../../colors";
+@import "../../scss/colors";
 
 
 .button {
   display: flex;
   flex-direction: row;
-  //flex-wrap: wrap;
   color: $button-color;
   &__list {
     display: flex;
@@ -13,7 +12,7 @@
     border-radius: 20px;
 
     &_show {
-      background-color: #448b4e;
+      background-color: $button__label_sh-color;
       display: none;
     }
   }
@@ -32,22 +31,21 @@
     padding: 5px;
     height: 20px;
     width: 90px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid $color-light-grey;
 
     &_selected {
-      background: #1976d2;
-      color: #d6d6d6;
+      background: $color-light-blue;
+      color: $color-light-grey;
     }
   }
   &__option:hover {
-    background-color: #d6d6d6;
+    background-color: $color-light-grey;
 
   }
 
   &__label {
-    //position: absolute;
     background: none;
-    color: #555555;
+    color: $color-dark-grey;
     margin-left: 15px;
     &_show {
       @extend .button__label;
@@ -56,10 +54,10 @@
       color: white;
     }
     :hover {
-      background: #0A67A3;
+      background: $button__label-color;
     }
     &__label:hover {
-      color: #448b4e;
+      color: $button__label_sh-color;
 
     }
   }

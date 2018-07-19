@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../scss/colors";
 @import "../demonstration-page/demonstration-page.component";
 .button {
   &__list {
@@ -22,22 +22,22 @@
     padding: .3em 0;
     height: 20px;
     width: 90px;
-    border: 1px solid #d6d6d6;
+    border: 1px solid $color-light-grey;
 
     &_selected {
-      background: #1976d2;
+      background: $color-light-blue;
 
-      color: #d6d6d6;
+      color: $color-light-grey;
     }
   }
   &__option:hover {
-    background-color: #d6d6d6;
+    background-color: $color-light-grey;
 
   }
   &__label {
 
     background: none;
-    color: #555555;
+    color: $color-dark-grey;
     margin-left: 15px;
     &_show {
       @extend .button__label;
@@ -47,11 +47,17 @@
       color: white;
     }
     :hover {
-      background: #0A67A3;
+      background: $button__label-color;
     }
     &__label:hover {
-      color: #448b4e;
+      color: $button__label_sh-color;
 
     }
   }
+}
+
+.console-section {
+  display: flex;
+  flex-direction: row;
+
 }

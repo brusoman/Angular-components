@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {GrowlModel} from "../growl-item/growl-model";
 
 @Component({
@@ -7,24 +7,15 @@ import {GrowlModel} from "../growl-item/growl-model";
   styleUrls: ['./growl.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class GrowlComponent implements OnInit {
+export class GrowlComponent {
   @Input() messages: GrowlModel[];
 
-  constructor() {
-  }
-
-  ngOnInit() {
-
-
-  }
-
   destroyGrowl(growl: GrowlModel) {
-    console.log("Array before delete: " + JSON.stringify(this.messages));
-    console.log("Index to delete: " + this.messages.indexOf(growl));
+    if (this.messages.length = 1) {
+      this.messages.splice(0, 0);
+    }
     this.messages.splice(this.messages.indexOf(growl), 1);
-    //console.log("Delete: " + JSON.stringify(growl))
-    console.log("Array after delete: " + JSON.stringify(this.messages));
-
+    console.log(JSON.stringify(this.messages));
   }
 
 }

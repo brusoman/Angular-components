@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {TEST_DIALOG} from "../../components/dialog/dialog.model";
+import {DialogModel, TEST_DIALOG} from "../../components/dialog/dialog.model";
 
 @Component({
   selector: 'dialog-showcase',
@@ -8,18 +8,14 @@ import {TEST_DIALOG} from "../../components/dialog/dialog.model";
   encapsulation: ViewEncapsulation.None,
 })
 export class DialogShowcaseComponent implements OnInit {
-  _model;
+  _model: DialogModel;
   _display: boolean = false;
-  constructor() {
-  }
 
   ngOnInit() {
     this._model = JSON.parse(JSON.stringify(TEST_DIALOG));
-
   }
 
-  displayDialog() {
+  toggleDialog() {
     this._display = !this._display;
-
   }
 }

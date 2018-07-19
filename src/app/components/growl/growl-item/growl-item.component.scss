@@ -1,13 +1,7 @@
-@import "../../../colors";
 @import "../../../../../node_modules/font-awesome/scss/variables";
+@import "../../../scss/colors";
+@import "../../../scss/font-awesome";
 
-.fontAwesome {
-
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-}
 .growl {
   width: 320px;
   height: 66px;
@@ -52,7 +46,7 @@
 
   &_succeed {
     @extend .growl;
-    background-color: #5cb85c;
+    background-color: $color-succeed;
 
     .growl__icon {
       @extend .fontAwesome;

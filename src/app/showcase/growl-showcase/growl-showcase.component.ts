@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {GROWLES, GrowlModel} from "../../components/growl/growl-item/growl-model";
 
 @Component({
@@ -7,12 +7,8 @@ import {GROWLES, GrowlModel} from "../../components/growl/growl-item/growl-model
   styleUrls: ['./growl-showcase.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class GrowlShowcaseComponent implements OnInit {
+export class GrowlShowcaseComponent {
   _growlArray: GrowlModel[] = GROWLES.slice();
-
-  ngOnInit(): void {
-
-  }
 
   showSucceed() {
     this._growlArray.push(GROWLES[0]);
