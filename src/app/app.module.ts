@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
 import {SelectButtonShowcaseComponent} from './showcase/select-button-showcase/select-button-showcase.component';
 import {DialogShowcaseComponent} from './showcase/dialog-showcase/dialog-showcase.component';
-import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+
 import {GrowlShowcaseComponent} from './showcase/growl-showcase/growl-showcase.component';
 import {DemonstrationPageComponent} from './showcase/demonstration-page/demonstration-page.component';
 import {RouterModule} from "@angular/router";
@@ -24,7 +24,6 @@ import {ConsoleModule} from "./components/console/console.module";
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule,
     RouterModule.forRoot(appRoutes),
     GrowlModule,
     SelectButtonModule,
