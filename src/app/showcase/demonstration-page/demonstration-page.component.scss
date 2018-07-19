@@ -1,7 +1,8 @@
-@import "../../components/growl/growl-item/growl-item.component";
+@import "../../../app/scss/font-awesome";
+@import "../../scss/colors";
 .dem {
   &__dummy {
-    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
+    background: linear-gradient(-45deg, $color-gradient-light, $color-gradient-dark);
     height: 70px;
   }
   &__top-menu {
@@ -9,7 +10,7 @@
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: #20272a;
+    background-color: $color-top-menu;
     color: white;
     text-align: left;
     font-size: 25px;
@@ -42,28 +43,12 @@
       }
     }
   }
-  //a&__github{
-  //  @extend .fontAwesome;
-  //  _display: inline-block;
-  //  position: absolute;
-  //  top: 1px;
-  //  right: 3px;
-  //  cursor: pointer;
-  //  font-size: 50px;
-  //  margin-top: 10px;
-  //  margin-right: 5px;
-  //  &:before {
-  //    content: "\f09b";
-  //  }
-
-
 
   &__titlebox {
-    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
-    color: #fff;
+    background: linear-gradient(-45deg, $color-gradient-light, $color-gradient-dark);
+    color: white;
     height: 150px;
-    //margin-top: 70px;
-    border-bottom: 1px solid #dde3e6;
+    border-bottom: 1px solid $color-border;
     .dem__content-section {
       padding: 30px;
       .dem__feature-title {

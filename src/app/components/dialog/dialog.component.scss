@@ -1,7 +1,7 @@
-@import "../../colors";
+@import "../../scss/colors";
 @import "../../../../node_modules/font-awesome/scss/variables";
 @import "../growl/growl-item/growl-item.component";
-
+@import "../../../app/scss/font-awesome";
 .dialog {
   width: 350px;
   min-width: 200px;
@@ -16,13 +16,14 @@
   margin: auto;
   background-color: white;
 
-  transition: opacity 3s;
+  transition: opacity 600ms;
   opacity: 1;
 
   &_hidden {
     @extend .dialog;
-    transition: opacity 3s;
+    transition: opacity 600ms, visibility 0s 600ms;
     opacity: 0;
+    visibility: hidden;
   }
 
   &__titlebar {
@@ -66,10 +67,10 @@
       min-height: 30px;
       text-align: center;
       padding-top: 5px;
-      border: 1px solid #2399e5;
+      border: 1px solid $color-info;
       border-radius: 3px;
-      color: #FFFFFF;
-      background: #2399e5;
+      color: white;
+      background: $color-info;
       display: inline-block;
       position: absolute;
       right: 80px;

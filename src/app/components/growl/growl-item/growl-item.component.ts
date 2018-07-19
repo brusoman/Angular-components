@@ -14,7 +14,7 @@ export class GrowlItemComponent implements OnInit {
 
   _hidden: boolean = false;
   ngOnInit() {
-    setTimeout(this.exit.bind(this), 10000);
+    setTimeout(this.exit.bind(this), 2000);
   }
 
   exit() {
