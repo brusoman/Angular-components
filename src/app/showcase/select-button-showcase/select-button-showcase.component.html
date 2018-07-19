@@ -1,0 +1,71 @@
+<div class="dem__titlebox">
+  <div class="dem__content-section">
+    <div class="dem__feature-title">SelectButton</div>
+    <div class="dem__feature-info">SelectButton is used to choose single or multiple items from a list using
+      buttons.
+    </div>
+
+  </div>
+</div>
+
+
+<div class="multiple">
+  <div class="button__list">
+    <h3>Multiple selection</h3>
+
+    <select-button-component [options]="_options" (onSelect)="getSelectedOptionsMultiple($event)"
+                             [multiple]="true"
+                             [outTemplate]="outTemplate">
+      <ng-template #outTemplate class="">
+        <img class="button__img" src="https://cdn2.iconfinder.com/data/icons/web-and-apps-interface/32/OK-128.png">
+        <span>Test template</span>
+      </ng-template>
+
+
+    </select-button-component>
+
+    <div class="button__list_show">
+      <p>Selected Types:</p>
+      <ng-container *ngIf="_selectedOptionsMultiple">
+
+
+        <ng-container *ngFor="let select of _selectedOptionsMultiple">
+
+          <div *ngIf="select.isSelected" class="button__option">
+
+            <span class="button__label_show">{{select.label}}</span>
+          </div>
+
+
+        </ng-container>
+
+      </ng-container>
+    </div>
+
+  </div>
+</div>
+<div class="single">
+  <div class="button__list">
+    <h3>Single selection</h3>
+
+    <select-button-component [options]="_options2" (onSelect)="getSelectedOptionsSingle($event)"
+                             [multiple]="false"></select-button-component>
+
+    <div class="button__list_show">
+      <p>Selected Type:</p>
+      <ng-container *ngIf="_selectedOptionsSingle">
+
+
+        <ng-container *ngFor="let select of _selectedOptionsSingle">
+
+          <div *ngIf="select.isSelected" class="button__option">
+
+            <span class="button__label_show">{{select.label}}</span>
+          </div>
+
+
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>

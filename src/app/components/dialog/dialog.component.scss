@@ -1,0 +1,96 @@
+@import "../../colors";
+@import "../../../../node_modules/font-awesome/scss/variables";
+@import "../growl/growl-item/growl-item.component";
+
+.dialog {
+  width: 350px;
+  min-width: 200px;
+  min-height: 150px;
+
+  border: 1px solid $dialog-border-color;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .3);
+  display: inline-block;
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  margin: auto;
+  background-color: white;
+
+  transition: opacity 3s;
+  opacity: 1;
+
+  &_hidden {
+    @extend .dialog;
+    transition: opacity 3s;
+    opacity: 0;
+  }
+
+  &__titlebar {
+    display: inline-block;
+    width: 350px;
+    min-width: 200px;
+    min-height: 60px;
+    background-color: $dialog__title-color;
+    border-bottom: 1px solid $dialog-border-color;
+    .dialog__title {
+      font-size: 20px;
+      margin: 20px 30px;
+
+    }
+  }
+  &__button-exit {
+    @extend .fontAwesome;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    margin: 5px;
+    cursor: pointer;
+    &:before {
+      content: $fa-var-times;
+    }
+  }
+  &__textarea {
+    margin: 10px;
+  }
+  &__text {
+
+  }
+  &__button-section {
+    width: 350px;
+    min-width: 200px;
+    min-height: 60px;
+    border-top: 1px solid $dialog-border-color;
+    position: relative;
+    .dialog__button-yes {
+      min-width: 75px;
+      min-height: 30px;
+      text-align: center;
+      padding-top: 5px;
+      border: 1px solid #2399e5;
+      border-radius: 3px;
+      color: #FFFFFF;
+      background: #2399e5;
+      display: inline-block;
+      position: absolute;
+      right: 80px;
+      margin-right: 10px;
+      @extend .fontAwesome;
+      font-size: 20px;
+      margin-top: 5px;
+      cursor: pointer;
+      &:before {
+        content: $fa-var-check;
+      }
+    }
+    .dialog__button-no {
+      @extend .dialog__button-yes;
+      border: 1px solid $dialog-border-color;
+      right: 0;
+      background: white;
+      color: black;
+      &:before {
+        content: $fa-var-times;
+      }
+    }
+  }
+}

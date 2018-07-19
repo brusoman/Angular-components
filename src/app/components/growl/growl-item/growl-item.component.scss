@@ -1,0 +1,104 @@
+@import "../../../colors";
+@import "../../../../../node_modules/font-awesome/scss/variables";
+
+.fontAwesome {
+
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+}
+.growl {
+  width: 320px;
+  height: 66px;
+  background-color: grey;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 5px;
+  &__button-exit {
+    @extend .fontAwesome;
+    display: inline-block;
+    position: absolute;
+    top: 1px;
+    right: 3px;
+    cursor: pointer;
+    font-size: 20px;
+    &:before {
+      content: $fa-var-times;
+    }
+
+  }
+  &__textarea {
+    display: inline-block;
+    padding-left: 30px;
+  }
+  &__title {
+    display: inline-block;
+    font-size: 25px;
+  }
+  &__message {
+
+    display: block;
+    font-size: 20px;
+  }
+  &__icon {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 30px;
+  }
+
+  &_succeed {
+    @extend .growl;
+    background-color: #5cb85c;
+
+    .growl__icon {
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
+      &:before {
+        content: $fa-var-check;
+      }
+    }
+
+  }
+
+  &_info {
+    @extend .growl;
+    background-color: $color-info;
+
+    .growl__icon {
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
+      &:before {
+        content: $fa-var-info-circle;
+      }
+    }
+  }
+
+  &_error {
+    @extend .growl;
+    background-color: $color-error;
+
+    .growl__icon {
+      @extend .fontAwesome;
+      font-size: 50px;
+      margin-top: 5px;
+      &:before {
+        content: $fa-var-times;
+      }
+    }
+  }
+  &_close {
+    transition: opacity 3s cubic-bezier(0, .5, .5, 1);
+    opacity: 0;
+  }
+
+}
+
+
+
+

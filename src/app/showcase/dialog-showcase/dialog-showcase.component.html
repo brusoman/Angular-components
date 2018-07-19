@@ -1,0 +1,16 @@
+<div class="dem__titlebox">
+  <div class="dem__content-section">
+    <div class="dem__feature-title">Dialog</div>
+    <div class="dem__feature-info">Dialog is a container to display content in an overlay window.</div>
+
+  </div>
+</div>
+<div class="view__button_info" (click)="displayDialog()">Show</div>
+<dialog-component [model]="_model" [(display)]="_display">
+  <div class="dialog__button-content">
+
+    <div class="dialog__button-yes" (click)="_display = false"> Yes</div>
+    <div class="dialog__button-no" (click)="_display = false"> No</div>
+
+  </div>
+</dialog-component>

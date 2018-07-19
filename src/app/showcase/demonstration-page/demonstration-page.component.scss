@@ -1,0 +1,80 @@
+@import "../../components/growl/growl-item/growl-item.component";
+.dem {
+  &__dummy {
+    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
+    height: 70px;
+  }
+  &__top-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #20272a;
+    color: white;
+    text-align: left;
+    font-size: 25px;
+    opacity: 0.9;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+    nav {
+      display: inline-block;
+      position: absolute;
+      top: 25%;
+      a {
+        color: white;
+        margin: 20px 10px;
+      }
+    }
+
+    a.dem__github {
+      @extend .fontAwesome;
+      display: inline-block;
+      position: absolute;
+      top: 1px;
+      right: 3px;
+      cursor: pointer;
+      font-size: 50px;
+      margin-top: 10px;
+      margin-right: 5px;
+      color: white;
+      text-decoration: none;
+      &:before {
+        content: "\f09b";
+      }
+    }
+  }
+  //a&__github{
+  //  @extend .fontAwesome;
+  //  _display: inline-block;
+  //  position: absolute;
+  //  top: 1px;
+  //  right: 3px;
+  //  cursor: pointer;
+  //  font-size: 50px;
+  //  margin-top: 10px;
+  //  margin-right: 5px;
+  //  &:before {
+  //    content: "\f09b";
+  //  }
+
+
+
+  &__titlebox {
+    background: linear-gradient(-45deg, #67d8ec, #1b81d7);
+    color: #fff;
+    height: 150px;
+    //margin-top: 70px;
+    border-bottom: 1px solid #dde3e6;
+    .dem__content-section {
+      padding: 30px;
+      .dem__feature-title {
+        font-size: 35px;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .dem__feature-info {
+        font-size: 19px;
+      }
+
+    }
+  }
+}

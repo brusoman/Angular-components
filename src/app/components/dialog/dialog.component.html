@@ -1,0 +1,17 @@
+<div class="dialog" [class.dialog_hidden]="!display">
+  <div class="dialog__titlebar">
+    <div class="dialog__button-exit" (click)="hide()"></div>
+    <div class="dialog__title">{{model.title}}</div>
+
+  </div>
+  <div class="dialog__textarea">
+    <div class="dialog__text">
+      {{model.text}}
+    </div>
+  </div>
+  <div class="dialog__button-section">
+    <ng-content select=".dialog__button-content"></ng-content>
+
+  </div>
+
+</div>
