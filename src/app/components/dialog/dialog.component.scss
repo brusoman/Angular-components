@@ -19,10 +19,11 @@
   transition: opacity 3s;
   opacity: 1;
 
-  &_hidden {
+ &_hidden {
     @extend .dialog;
-    transition: opacity 3s;
+    transition: opacity 3s, visibility 0s 1s;
     opacity: 0;
+    visibility: hidden;
   }
 
   &__titlebar {
