@@ -15,7 +15,7 @@ export class DialogShowcaseComponent implements OnInit {
     this._model = JSON.parse(JSON.stringify(TEST_DIALOG));
   }
 
-  displayDialog() {
+  toggleDialog() {
     this._display = !this._display;
   }
 }
