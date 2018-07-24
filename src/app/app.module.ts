@@ -12,6 +12,10 @@ import {SelectButtonModule} from "./components/select-button/select-button.modul
 import {DialogModule} from "./components/dialog/dialog.module";
 import {appRoutes} from "./routes";
 import {ConsoleModule} from "./components/console/console.module";
+import {QuoteShowcaseComponent} from './showcase/quote-showcase/quote-showcase.component';
+import {HttpClientModule} from "@angular/common/http";
+import {QuoteModule} from "./components/quote/quote.module";
+import {ShowcaseModule} from "./showcase/showcase.module";
 
 
 @NgModule({
@@ -21,6 +25,7 @@ import {ConsoleModule} from "./components/console/console.module";
     SelectButtonShowcaseComponent,
     GrowlShowcaseComponent,
     DemonstrationPageComponent,
+    QuoteShowcaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,9 @@ import {ConsoleModule} from "./components/console/console.module";
     GrowlModule,
     SelectButtonModule,
     DialogModule,
-    ConsoleModule
+    ConsoleModule,
+    HttpClientModule,
+    QuoteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

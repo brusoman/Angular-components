@@ -1,0 +1,32 @@
+@import "../../scss/colors";
+
+.quote {
+  min-height: 150px;
+  position: relative;
+
+  &__author {
+    margin-left: 50%;
+    position: relative;
+    margin-top: 25px;
+    span {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 20px;
+      color: $color-space-grey;
+    }
+
+  }
+  &__button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    margin: 1px;
+    padding: 5px;
+    height: 20px;
+    width: 90px;
+    color: white;
+    background-color: $color-gradient-dark;
+    border: 1px solid $color-light-grey;
+  }
+}
