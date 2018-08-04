@@ -1,0 +1,42 @@
+@import "../../scss/colors";
+@import "../../../app/scss/font-awesome";
+
+$height: 100px;
+$height-min: 50px;
+.toolbar {
+  &__body {
+    width: 100%;
+    height: $height;
+    background-color: $color-top-menu;
+    color: white;
+    text-align: left;
+    font-size: 25px;
+    opacity: 0.9;
+    z-index: 10;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
+    transition: height 0.7s;
+    top: 0;
+    position: relative;
+    nav {
+      display: inline-block;
+      position: absolute;
+      top: 25%;
+      a {
+        color: white;
+        margin: 20px 10px;
+      }
+    }
+    button {
+      display: inline-block;
+    }
+  }
+  &__body-min {
+    height: $height-min;
+    position: fixed;
+
+  }
+}
+
+:host(.root) {
+  background-color: red;
+}

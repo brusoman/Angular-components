@@ -1,0 +1,8 @@
+<div class="toolbar">
+  <div #body class="toolbar__body" [class.toolbar__body-min]="isMin">
+    <ng-content></ng-content>
+    <button (click)="min()">Min</button>
+    <button (click)="max()">Max</button>
+  </div>
+
+</div>
