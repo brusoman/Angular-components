@@ -16,7 +16,7 @@ $height-min: 50px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
     transition: height 0.7s;
     top: 0;
-    position: relative;
+    position: sticky;
     nav {
       display: inline-block;
       position: absolute;
@@ -32,11 +32,15 @@ $height-min: 50px;
   }
   &__body-min {
     height: $height-min;
-    position: fixed;
-
+    //position: fixed;
+    //padding-top: 50px;
   }
 }
 
-:host(.root) {
-  background-color: red;
+.toolbarHost {
+  position: sticky;
+  top: 0;
+  display: block;
+  padding-top: 5px;
+
 }

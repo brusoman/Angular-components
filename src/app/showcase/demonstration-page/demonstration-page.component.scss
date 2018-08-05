@@ -1,6 +1,8 @@
 @import "../../../app/scss/font-awesome";
 @import "../../scss/colors";
 .dem {
+  overflow: visible;
+  padding-top: 40px;
   &__dummy {
     background: linear-gradient(-45deg, $color-gradient-light, $color-gradient-dark);
     height: 70px;
