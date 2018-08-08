@@ -21,9 +21,24 @@ $height-min: 50px;
       display: inline-block;
       position: absolute;
       top: 25%;
+      width: 100%;
       a {
         color: white;
         margin: 20px 10px;
+      }
+      a.image {
+        @extend .fontAwesome;
+        display: inline-block;
+        position: absolute;
+        top: -25px;
+        right: 3px;
+        cursor: pointer;
+        font-size: 50px;
+        color: white;
+        text-decoration: none;
+        &:before {
+          content: "\f09b";
+        }
       }
     }
     button {
@@ -32,8 +47,19 @@ $height-min: 50px;
   }
   &__body-min {
     height: $height-min;
-    //position: fixed;
-    //padding-top: 50px;
+    nav {
+
+      a {
+        transition: font-size 0.7s;
+        font-size: 20px;
+
+      }
+      a.image {
+        transition: font-size 0.7s;
+        font-size: 40px;
+        top: -27px;
+      }
+    }
   }
 }
 
