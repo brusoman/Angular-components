@@ -15,7 +15,6 @@ import {ConsoleModule} from "./components/console/console.module";
 import {QuoteShowcaseComponent} from './showcase/quote-showcase/quote-showcase.component';
 import {HttpClientModule} from "@angular/common/http";
 import {QuoteModule} from "./components/quote/quote.module";
-import {ShowcaseModule} from "./showcase/showcase.module";
 
 
 @NgModule({
