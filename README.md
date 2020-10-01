@@ -1,4 +1,19 @@
 # AngularComponents
+Graduation project of Netcracker Educational Center. Library of Angular components with showcases similar to PrimeNg.  
+
+Consists of 4 components: 
+1. Select button Component (multiple modes) <br> <br>
+SelectButton is a form component to choose a value from a list of options using button elements.
+![](select-button.png)
+2. Growl Component <br> <br>
+Growl displays messages in an overlay.
+![](select-button.png)
+3. Dialog Component <br><br>
+An external page can be displayed in a dynamically generated dialog on runtime.
+![](dialog.png)
+4. Quote Component <br><br>
+Component which fetches and shows quote from http://quotes.stormconsultancy.co.uk
+![](quote.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
